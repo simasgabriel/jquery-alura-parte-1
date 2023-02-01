@@ -24,5 +24,9 @@ campo.on("focus", function () {
     setInterval(function () {
         tempoRestante--;
         $("#tempo").text(tempoRestante);
+        if (tempoRestante <= 1) {
+            campo.attr("disabled", true)
+            tempoRestante = 0;
+        }
     }, 1000);
 })
