@@ -14,7 +14,15 @@ campo.on("input", function () {
     let quantidadePalavras = conteudoCampo.split(/\S+/).length;
     let quantidadeCaracteres = conteudoCampo.length;
 
-    $("#contadorPalavras").text(quantidadePalavras);
-    $("#contadorCaracteres").text(quantidadeCaracteres - (quantidadePalavras - 1));
+    $("#contadorPalavras").text(quantidadePalavras - 1);
+    $("#contadorCaracteres").text(quantidadeCaracteres);
 
+})
+
+let tempoRestante = $("#tempo").text();
+campo.on("focus", function () {
+    setInterval(function () {
+        tempoRestante--;
+        $("#tempo").text(tempoRestante);
+    }, 1000);
 })
