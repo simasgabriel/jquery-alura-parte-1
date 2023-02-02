@@ -4,22 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <title>Alura Typer</title>
+    <link rel="stylesheet" type="text/css"
+        href="C:\Users\8820948\Documents\GitHub\jquery-alura-parte-1\alura-typer\public\css\libs\materialize.min.css">
 </head>
 
 <body>
     <!-- Seja bem vindo ao curso de jQuery :) -->
-    <h1>Alura Typer</h1>
-    <p class="frase">teste muito legal</p>
-    <ul class="informacoes">
-        <li><span id="tamanhoFrase">17</span> words</li>
-        <li><span id="tempo">10 </span> secs </li>
-        <textarea class="campoDigitacao" rows="8" cols="40"></textarea>
-        <ul>
-            <li><span id="contadorCaracteres">0</span> caracteres</li>
-            <li><span id="contadorPalavras">0</span> palavras</li>
-        </ul>
-    </ul>
 
+    <div class="container">
+        <h1 class="center">teste velocidade digitação</h1>
+        <h3 class="center">digite o texto abaixo</h2>
+            <p class="frase center">teste muito legal</p>
+            <ul class="informacoes">
+                <li><span id="tamanhoFrase">17</span> words</li>
+                <li><span id="tempo">3 </span><span id="secs">secs</span> </li>
+                <textarea class="campoDigitacao" rows="8" cols="40"></textarea>
+                <button id="reiniciarJogo" class="waves-effect waves-light btn">REINICIAR JOGO</button>
+                <ul>
+                    <li><span id="contadorCaracteres">0</span> caracteres</li>
+                    <li><span id="contadorPalavras">0</span> palavras</li>
+                </ul>
+            </ul>
+            <section class="placar">
+                <h3 class="center">Placar</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+
+                            </th>
+                        </tr>
+
+
+                    </thead>
+                </table>
+
+            </section>
+    </div>
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
 </body>
