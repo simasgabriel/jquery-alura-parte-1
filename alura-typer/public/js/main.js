@@ -18,7 +18,13 @@ campo.on("input", function () {
 })
 
 
+function inserePlacar() {
+    let tabela = $(".placar").find("tbody");
+    let contadorPalavras = $("#contadorPalavras").text(quantidadePalavras - 1);
+    let linha = "<tr>" + "<td>" + usuario + "</td>" +
+        "<td>" + numeroPalavras + "</td>" + " </tr>";
 
+}
 
 
 
@@ -40,6 +46,18 @@ campo.on("focus", function () {
 })
 
 
+campo.on("input", function () {
+    let digitado = campo.val();
+    let comparavel = frase.substr(0, digitado.length);
+    if (digitado == comparavel) {
+        campo.addClass("borda-verde");
+        campo.removeClass("borda-vermelha");
+    } else {
+        campo.addClass("borda-vermelha");
+        campo.removeClass("borda-verde");
+    }
+});
+
 
 
 
@@ -56,6 +74,10 @@ $("#reiniciarJogo").on("click", function () {
 
     $("#contadorPalavras").text(0);
     $("#contadorCaracteres").text(0);
+
+
+    campo.removeClass("borda-vermelha");
+    campo.removeClass("borda-verde");
 
 
 
